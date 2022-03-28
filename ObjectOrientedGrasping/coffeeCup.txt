@@ -1,0 +1,42 @@
+# create object coffeeCup
+class coffeeCup {
+
+  # attributes
+  basic {English.name = "coffee cup"; Chinese.name = "咖啡杯"; madeOf = paper;
+         weight[g] = <5, 10>; volume[mm3] = <25, 35>}
+         }
+
+  shape {cylinder: radius.bigCircle[cm] = <2, 2.5>; radius.smallCircle[cm] = <1.5, 2>; length[cm] =<5, 6>}
+
+  position {centroid = (34, 21, 58); axe = (2, 3, 1); direction = 1}
+    ......
+
+  # properties 
+  property {collinear(center.bigCircle, centroid, center.smallCircle); centroid = (2*center.bigCircle + 3*center.smallCircle)/5; ...}
+  
+  action {grasp; release; rotate}
+  
+  subclass {withoutCoffee; withLittleCoffee; withHalfCoffee; withMuchCoffee}
+
+  class withoutCoffee.coffeeCup {
+  ......
+
+  }
+
+  # actions with methods
+  action grasp.withoutCoffee.coffeeCup { 
+  ...... 
+
+  }
+
+  action release.withMuchCoffee.coffeeCup {
+  ......
+
+  }
+
+ action rotate.withLittleCoffee.coffeeCup {
+  ......
+
+  }
+}
+
